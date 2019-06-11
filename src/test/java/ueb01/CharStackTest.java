@@ -11,6 +11,7 @@ class CharStackTest {
 	void testCharStack() {
 		CharStack cs = new CharStackImpl();
 
+		//System.out.println("First time: " + cs.size());
 		// zu Beginn muss der Stack leer sein!
 		assertEquals(0, cs.size());
 
@@ -21,8 +22,11 @@ class CharStackTest {
 		char[] a = {'a', 'b', 'c'};
 		for (char c : a)
 			cs.push(c);
+
+		//System.out.println("Second time: " + cs.size());
 		// ...Groesse checken
 		assertEquals(3, cs.size());
+
 
 		// ...und rückwärts!
 		for (int i = a.length-1; i >= 0; i--)
